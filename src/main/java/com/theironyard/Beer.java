@@ -1,18 +1,17 @@
 package com.theironyard;
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.*;
 
 /**
  * Created by BennettIronYard on 11/10/15.
  */
-//@Entity
+@Entity
 public class Beer {
     @Id
-
-
+    @GeneratedValue
     Integer id;
 
     String name;
     String type;
-
+    Integer calories;
 }
