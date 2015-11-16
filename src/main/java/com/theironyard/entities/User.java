@@ -11,10 +11,15 @@ import java.util.List;
 public class User {
     @Id
     @GeneratedValue
+    @Column(nullable = false)
     Integer id;
 
+    @Column(nullable = false)
     public String name;
+
+    @Column(nullable = false)
     public String password;
+
     @OneToMany(mappedBy = "user") //this is the name of the field in the beer class
     public List<Beer> beers;
 }
